@@ -15,10 +15,13 @@ module.exports = {
         error: "var(--color-error)",
         "primary-dark": "var(--color-primary-dark)",
         "gray-light": "var(--color-gray-light)",
+        "error-light": "var(--color-error-light)",
+        "error-dark": "var(--color-error-dark)",
       },
       fontSize: {
         sm: "14px",
         base: "16px",
+        md: "18px",
         lg: "20px",
         xl: "22px",
         "2xl": "25px",

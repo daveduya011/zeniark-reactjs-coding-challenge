@@ -7,6 +7,8 @@
   --color-primary-dark: #053257;
   --color-success: #4FBD1B;
   --color-error: #E04E10;
+  --color-error-light: #FF4D00;
+  --color-error-dark: #E33131;
   --color-foreground: #000000;
   --color-background: #FFFFFF;
   --color-gray-light: #E3E3E3;
@@ -61,5 +63,10 @@ body {
 
   .line {
     @apply w-[90%] bg-gray-light h-px
+  }
+
+  .link {
+    @apply text-4xl font-semibold text-primary border-b-primary hover:border-b-primary-dark
+    border-b-4 uppercase tracking-[-1.4px] hover:text-primary-dark
   }
 }

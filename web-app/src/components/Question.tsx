@@ -1,6 +1,8 @@
 import Card from "@/components/Card";
 import Image from "next/image";
 import { inter } from "@/fonts";
+import CheckIcon from "@/components/Icons/CheckIcon";
+import WrongIcon from "@/components/Icons/WrongIcon";
 
 function Question(props: {
   question: string;
@@ -38,15 +40,11 @@ function Question(props: {
         <div className="line" />
         <div className="w-full flex flex-wrap justify-between sm:justify-center items-center px-5 py-10 gap-2 sm:gap-12">
           <button className="btn-success w-full sm:w-auto">
-            <span>
-              <Image src="/images/check.svg" width={28} height={20} alt="" />
-            </span>
+            <CheckIcon />
             True
           </button>
           <button className="btn-error w-full sm:w-auto">
-            <span>
-              <Image src="/images/wrong.svg" width={20} height={22.8} alt="" />
-            </span>
+            <WrongIcon />
             False
           </button>
         </div>

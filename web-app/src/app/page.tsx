@@ -21,12 +21,8 @@ export default function Home() {
       <div className="btn hover:bg-primary cursor-auto w-auto sm:w-full max-w-[523px] mt-9">
         Can you score 10/10?
       </div>
-      <Link
-        href="/quiz"
-        className="mt-14 text-4xl font-semibold text-primary border-b-primary hover:border-b-primary-dark
-            border-b-4 uppercase tracking-[-1.4px] hover:text-primary-dark"
-      >
-        LET’S START!
+      <Link href="/quiz" className="mt-14 link">
+        Let’s Start!
       </Link>
     </Card>
   );
