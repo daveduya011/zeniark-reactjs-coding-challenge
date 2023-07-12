@@ -9,11 +9,12 @@ module.exports = {
     extend: {
       colors: {
         primary: "var(--color-primary)",
-        "primary-dark": "var(--color-primary)",
         foreground: "var(--color-foreground)",
         background: "var(--color-background)",
         success: "var(--color-success)",
         error: "var(--color-error)",
+        "primary-dark": "var(--color-primary-dark)",
+        "gray-light": "var(--color-gray-light)",
       },
       fontSize: {
         sm: "14px",

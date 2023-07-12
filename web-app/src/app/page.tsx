@@ -4,31 +4,30 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="flex h-full items-center justify-center p-8">
-      <Card>
-        <Image
-          src="/images/zeniark-logo.png"
-          className="mb-9"
-          alt="logo"
-          width={344}
-          height={91}
-        />
-        <h1 className="text-4xl font-semibold">
-          Welcome to the Trivia Challenge!
-        </h1>
-        <p className="text-xl font-medium">
-          You will be presented with 10 True or False questions.
-        </p>
-        <div className="btn cursor-auto w-auto sm:w-full max-w-[523px] mt-9">
-          Can you score 10/10?
-        </div>
-        <Link
-          href="/quiz"
-          className="mt-14 text-4xl font-semibold text-primary border-b-primary border-b-4 uppercase tracking-[-1.4px]"
-        >
-          LET’S START!
-        </Link>
-      </Card>
-    </main>
+    <Card className="p-5">
+      <Image
+        src="/images/zeniark-logo.png"
+        className="mb-9"
+        alt="logo"
+        width={344}
+        height={91}
+      />
+      <h1 className="text-4xl font-semibold">
+        Welcome to the Trivia Challenge!
+      </h1>
+      <p className="text-xl font-medium tracking-[-0.11px]">
+        You will be presented with 10 True or False questions.
+      </p>
+      <div className="btn hover:bg-primary cursor-auto w-auto sm:w-full max-w-[523px] mt-9">
+        Can you score 10/10?
+      </div>
+      <Link
+        href="/quiz"
+        className="mt-14 text-4xl font-semibold text-primary border-b-primary hover:border-b-primary-dark
+            border-b-4 uppercase tracking-[-1.4px] hover:text-primary-dark"
+      >
+        LET’S START!
+      </Link>
+    </Card>
   );
 }

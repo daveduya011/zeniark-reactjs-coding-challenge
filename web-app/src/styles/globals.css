@@ -9,6 +9,7 @@
   --color-error: #E04E10;
   --color-foreground: #000000;
   --color-background: #FFFFFF;
+  --color-gray-light: #E3E3E3;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -42,12 +43,12 @@ body {
 
 @layer components {
   .btn {
-    @apply bg-primary text-background flex gap-2 items-center justify-center
+    @apply bg-primary text-background flex gap-4 items-center justify-center
     rounded-xl cursor-pointer hover:bg-primary-dark text-xl sm:text-4xl px-5 py-4 tracking-[-1.4px]
   }
 
   .btn-small {
-    @apply btn text-xl tracking-[-1.2px];
+    @apply btn text-3xl tracking-[-1.2px] py-2 px-7 rounded-lg;
   }
 
   .btn-success {
@@ -56,5 +57,9 @@ body {
 
   .btn-error {
     @apply btn-small bg-error hover:bg-red-800
+  }
+
+  .line {
+    @apply w-[90%] bg-gray-light h-px
   }
 }
