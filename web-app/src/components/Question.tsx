@@ -12,21 +12,15 @@ function Question(props: {
     <Card className="justify-between">
       {/*  Header */}
       <header className="w-full flex flex-col items-center">
-        <div className="w-full flex justify-between items-center px-7 py-5">
-          <div>
-            <Image
-              src="/images/logo.png"
-              width={60}
-              height={65}
-              alt="logo"
-              className="mr-7 inline"
-            />
-            <p className="text-2xl font-semibold inline">
+        <div className="w-full flex-col sm:flex-row flex justify-between items-center px-7 py-5">
+          <div className="flex text-center justify-center flex-wrap items-center gap-2 sm:gap-7">
+            <Image src="/images/logo.png" width={60} height={65} alt="logo" />
+            <p className="text-xl sm:text-2xl font-semibold inline">
               Category: {props.category}
             </p>
           </div>
           <div
-            className={`text-lg font-medium tracking-[0.1px] mr-7 ${inter.className}`}
+            className={`text-md sm:text-lg font-medium tracking-[0.1px] mr-7 ${inter.className}`}
           >
             1 of 10
           </div>
@@ -35,21 +29,21 @@ function Question(props: {
       </header>
 
       {/*  Body */}
-      <p className="text-5xl max-w-[580px] tracking-[0.25px]">
+      <p className="text-2xl sm:text-5xl m-10 max-w-[580px] tracking-[0.25px]">
         {props.question}
       </p>
 
       {/*  Footer  */}
       <footer className="w-full flex flex-col items-center">
         <div className="line" />
-        <div className="flex justify-between items-center px-5 py-10 gap-12">
-          <button className="btn-success">
+        <div className="w-full flex flex-wrap justify-between sm:justify-center items-center px-5 py-10 gap-2 sm:gap-12">
+          <button className="btn-success w-full sm:w-auto">
             <span>
               <Image src="/images/check.svg" width={28} height={20} alt="" />
             </span>
             True
           </button>
-          <button className="btn-error">
+          <button className="btn-error w-full sm:w-auto">
             <span>
               <Image src="/images/wrong.svg" width={20} height={22.8} alt="" />
             </span>

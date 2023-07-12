@@ -48,7 +48,7 @@ body {
   }
 
   .btn-small {
-    @apply btn text-3xl tracking-[-1.2px] py-2 px-7 rounded-lg;
+    @apply btn text-lg sm:text-3xl tracking-tight sm:tracking-[-1.2px] py-2 px-4 sm:px-7 rounded-lg;
   }
 
   .btn-success {
