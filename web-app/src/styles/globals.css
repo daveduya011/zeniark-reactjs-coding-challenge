@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary: #085696;
+  --color-primary-dark: #053257;
+  --color-success: #4FBD1B;
+  --color-error: #E04E10;
+  --color-foreground: #000000;
+  --color-background: #FFFFFF;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-foreground: #FFFFFF;
+    --color-background: #000000;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  height: 100vh;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  color: var(--color-foreground);
+  background: var(--color-primary);
+  background-image: url("/images/bg.png");
+  background-position: bottom right;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+@layer components {
+  .btn {
+    @apply bg-primary text-background flex gap-2 items-center justify-center font-medium
+    rounded-xl cursor-pointer hover:bg-primary-dark text-xl sm:text-3xl px-5 py-5
+  }
+
+  .btn-small {
+    @apply btn text-xl;
+  }
+
+  .btn-success {
+    @apply btn-small bg-success hover:bg-green-800
+  }
+
+  .btn-error {
+    @apply btn-small bg-error hover:bg-red-800
+  }
+}
