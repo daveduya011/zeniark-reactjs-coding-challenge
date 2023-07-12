@@ -17,7 +17,9 @@ function Result(props: { score: number; items: ResultItem[] }) {
       {/*  Header */}
       <header className="w-full flex flex-col items-center">
         <div className="w-full flex-col sm:flex-row flex justify-between items-center px-7 py-5">
-          <Image src="/images/logo.png" width={60} height={65} alt="logo" />
+          <Link href="/">
+            <Image src="/images/logo.png" width={60} height={65} alt="logo" />
+          </Link>
           <div
             className={`text-md sm:text-3xl font-semibold tracking-[0.15px] ${inter.className}`}
           >

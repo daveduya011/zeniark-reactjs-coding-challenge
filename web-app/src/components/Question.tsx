@@ -3,6 +3,7 @@ import Image from "next/image";
 import { inter } from "@/fonts";
 import CheckIcon from "@/components/Icons/CheckIcon";
 import WrongIcon from "@/components/Icons/WrongIcon";
+import Link from "next/link";
 
 function Question(props: {
   question: string;
@@ -16,7 +17,9 @@ function Question(props: {
       <header className="w-full flex flex-col items-center">
         <div className="w-full flex-col sm:flex-row flex justify-between items-center px-7 py-5">
           <div className="flex text-center justify-center flex-wrap items-center gap-2 sm:gap-7">
-            <Image src="/images/logo.png" width={60} height={65} alt="logo" />
+            <Link href="/">
+              <Image src="/images/logo.png" width={60} height={65} alt="logo" />
+            </Link>
             <p className="text-xl sm:text-2xl font-semibold inline">
               Category: {props.category}
             </p>
