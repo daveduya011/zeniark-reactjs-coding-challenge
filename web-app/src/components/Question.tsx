@@ -8,15 +8,19 @@ import Link from "next/link";
 function Question(props: {
   question: string;
   category: string;
-  answer: boolean;
+  answer: string;
   index: number;
+  totalQuestions: number;
 }) {
   return (
     <Card className="justify-between">
       {/*  Header */}
       <header className="w-full flex flex-col items-center">
-        <div className="w-full flex-col sm:flex-row flex justify-between items-center px-7 py-5">
-          <div className="flex text-center justify-center flex-wrap items-center gap-2 sm:gap-7">
+        <div
+          className="w-full grid grid-flow-row sm:grid-flow-col place-items-center sm:place-content-between
+         px-7 py-5 items-center gap-2 sm:gap-7"
+        >
+          <div className="flex flex-col sm:flex-row gap-2 items-center justify-center">
             <Link href="/">
               <Image src="/images/logo.png" width={60} height={65} alt="logo" />
             </Link>
@@ -25,18 +29,19 @@ function Question(props: {
             </p>
           </div>
           <div
-            className={`text-md sm:text-lg font-medium tracking-[0.1px] mr-7 ${inter.className}`}
+            className={`text-md sm:text-lg font-medium tracking-[0.1px] sm:mr-7 ${inter.className}`}
           >
-            1 of 10
+            {props.index} of {props.totalQuestions}
           </div>
         </div>
         <div className="line" />
       </header>
 
       {/*  Body */}
-      <p className="text-2xl sm:text-5xl m-5 sm:m-10 max-w-[580px] tracking-[0.25px]">
-        {props.question}
-      </p>
+      <div
+        className="text-2xl sm:text-5xl m-5 sm:m-10 max-w-[580px] tracking-[0.25px]"
+        dangerouslySetInnerHTML={{ __html: props.question }}
+      />
 
       {/*  Footer  */}
       <footer className="w-full flex flex-col items-center">

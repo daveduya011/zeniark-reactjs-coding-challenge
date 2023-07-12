@@ -13,6 +13,7 @@
   --color-foreground: #000000;
   --color-background: #FFFFFF;
   --color-gray-light: #E3E3E3;
+  --color-transparent: rgba(0, 0, 0, 0.62);
 }
 
 @media (prefers-color-scheme: dark) {

@@ -11,6 +11,7 @@ export default function Home() {
         alt="logo"
         width={344}
         height={91}
+        loading="eager"
       />
       <h1 className="text-4xl font-semibold">
         Welcome to the Trivia Challenge!
@@ -21,7 +22,7 @@ export default function Home() {
       <div className="btn hover:bg-primary cursor-auto w-auto sm:w-full max-w-[523px] mt-9">
         Can you score 10/10?
       </div>
-      <Link href="/quiz" className="mt-14 link">
+      <Link href="/start-quiz" className="mt-14 link">
         Let’s Start!
       </Link>
     </Card>

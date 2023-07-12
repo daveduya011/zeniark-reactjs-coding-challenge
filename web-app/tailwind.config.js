@@ -13,6 +13,7 @@ module.exports = {
         background: "var(--color-background)",
         success: "var(--color-success)",
         error: "var(--color-error)",
+        transparent: "var(--color-transparent)",
         "primary-dark": "var(--color-primary-dark)",
         "gray-light": "var(--color-gray-light)",
         "success-light": "var(--color-success-light)",
