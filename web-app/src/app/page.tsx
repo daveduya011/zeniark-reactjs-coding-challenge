@@ -8,25 +8,25 @@ export default function Home() {
       <Card>
         <Image
           src="/images/zeniark-logo.png"
-          className="mb-10"
+          className="mb-9"
           alt="logo"
           width={344}
           height={91}
         />
-        <h1 className="text-3xl font-semibold mb-2">
+        <h1 className="text-4xl font-semibold">
           Welcome to the Trivia Challenge!
         </h1>
-        <p className="text-lg font-medium">
+        <p className="text-xl font-medium">
           You will be presented with 10 True or False questions.
         </p>
-        <div className="btn cursor-auto w-auto sm:w-full max-w-md mt-7">
+        <div className="btn cursor-auto w-auto sm:w-full max-w-[523px] mt-9">
           Can you score 10/10?
         </div>
         <Link
           href="/quiz"
-          className="mt-12 text-3xl font-semibold text-primary border-b-primary border-b-4 uppercase"
+          className="mt-14 text-4xl font-semibold text-primary border-b-primary border-b-4 uppercase tracking-[-1.4px]"
         >
-          {"Let's Start!"}
+          LET’S START!
         </Link>
       </Card>
     </main>

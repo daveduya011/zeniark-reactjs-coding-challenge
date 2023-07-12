@@ -15,6 +15,16 @@ module.exports = {
         success: "var(--color-success)",
         error: "var(--color-error)",
       },
+      fontSize: {
+        sm: "14px",
+        base: "16px",
+        lg: "20px",
+        xl: "22px",
+        "2xl": "25px",
+        "3xl": "30px",
+        "4xl": "35px",
+        "5xl": "50px",
+      },
       borderRadius: {
         card: "10px",
       },

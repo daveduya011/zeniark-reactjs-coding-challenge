@@ -42,12 +42,12 @@ body {
 
 @layer components {
   .btn {
-    @apply bg-primary text-background flex gap-2 items-center justify-center font-medium
-    rounded-xl cursor-pointer hover:bg-primary-dark text-xl sm:text-3xl px-5 py-5
+    @apply bg-primary text-background flex gap-2 items-center justify-center
+    rounded-xl cursor-pointer hover:bg-primary-dark text-xl sm:text-4xl px-5 py-4 tracking-[-1.4px]
   }
 
   .btn-small {
-    @apply btn text-xl;
+    @apply btn text-xl tracking-[-1.2px];
   }
 
   .btn-success {
