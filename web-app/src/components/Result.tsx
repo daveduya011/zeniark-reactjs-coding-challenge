@@ -30,15 +30,17 @@ function Result(props: { score: number; items: ResultItem[] }) {
 
       {/*  Score */}
       <div className="m-4">
-        <p className="text-2xl sm:text-5xl font-semibold mx-10 max-w-[580px] tracking-[0.25px]">
+        <p className="text-4xl sm:text-5xl font-semibold mx-10 max-w-[580px] tracking-[0.25px]">
           {props.score}/{props.items.length}
         </p>
-        <p className="text-lg sm:text-xl font-medium">Your Score</p>
+        <p className="text-xl font-medium">Your Score</p>
       </div>
       <div className="line" />
 
       {/*  Questions and Correct Answers  */}
-      <div className={`text-center px-16 py-4 ${inter.className}`}>
+      <div
+        className={`text-center pl-10 pr-5 sm:pl-16 sm:pr-16 ${inter.className}`}
+      >
         <ol className="text-gray-400 text-md">
           {props.items.map((item, index) => {
             return (
@@ -46,7 +48,7 @@ function Result(props: { score: number; items: ResultItem[] }) {
                 key={index}
                 className="list-decimal py-5 text-left border-b-2 border-gray-light border-dashed"
               >
-                <div className="flex justify-between items-center">
+                <div className="grid grid-flow-col justify-between items-center">
                   <div className="px-4">
                     <div className="text-foreground tracking-[0.08px] text-base">
                       {item.question}
@@ -73,11 +75,13 @@ function Result(props: { score: number; items: ResultItem[] }) {
                       .
                     </div>
                   </div>
-                  {item.playerAnswer == item.answer ? (
-                    <CheckIcon className="text-success" />
-                  ) : (
-                    <WrongIcon className="text-error-dark" />
-                  )}
+                  <div>
+                    {item.playerAnswer == item.answer ? (
+                      <CheckIcon className="text-success-light w-3 sm:w-6" />
+                    ) : (
+                      <WrongIcon className="text-error-dark w-3 sm:w-6" />
+                    )}
+                  </div>
                 </div>
               </li>
             );

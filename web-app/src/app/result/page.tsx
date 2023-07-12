@@ -22,6 +22,30 @@ function Page() {
           playerAnswer: true,
           answer: false,
         },
+        {
+          question:
+            "Former United States Presidents John Adams and Thomas Jefferson died within hours of each other.",
+          playerAnswer: true,
+          answer: false,
+        },
+        {
+          question:
+            "Former United States Presidents John Adams and Thomas Jefferson died within hours of each other.",
+          playerAnswer: true,
+          answer: false,
+        },
+        {
+          question:
+            "Former United States Presidents John Adams and Thomas Jefferson died within hours of each other.",
+          playerAnswer: true,
+          answer: false,
+        },
+        {
+          question:
+            "Former United States Presidents John Adams and Thomas Jefferson died within hours of each other.",
+          playerAnswer: true,
+          answer: false,
+        },
       ]}
     />
   );

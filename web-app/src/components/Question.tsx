@@ -31,7 +31,7 @@ function Question(props: {
       </header>
 
       {/*  Body */}
-      <p className="text-2xl sm:text-5xl m-10 max-w-[580px] tracking-[0.25px]">
+      <p className="text-2xl sm:text-5xl m-5 sm:m-10 max-w-[580px] tracking-[0.25px]">
         {props.question}
       </p>
 
