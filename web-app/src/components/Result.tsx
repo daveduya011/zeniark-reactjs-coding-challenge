@@ -97,7 +97,7 @@ function Result(props: { score: number; items: ResultItem[] }) {
 
       {/*  Footer  */}
       <footer className="w-full flex flex-col items-center py-12">
-        <a href="/start-quiz" className="link">
+        <a href="/" className="link">
           Play Again
         </a>
       </footer>

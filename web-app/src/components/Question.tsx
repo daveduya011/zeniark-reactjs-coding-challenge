@@ -12,9 +12,10 @@ function Question(props: {
   index: number;
   totalQuestions: number;
   setAnswer: (answer: string) => void;
+  className?: string;
 }) {
   return (
-    <Card className="justify-between">
+    <Card className={`justify-between ${props.className || ""}`}>
       {/*  Header */}
       <header className="w-full flex flex-col items-center">
         <div
