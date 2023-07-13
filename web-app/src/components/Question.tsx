@@ -11,6 +11,7 @@ function Question(props: {
   answer: string;
   index: number;
   totalQuestions: number;
+  setAnswer: (answer: string) => void;
 }) {
   return (
     <Card className="justify-between">
@@ -20,7 +21,7 @@ function Question(props: {
           className="w-full grid grid-flow-row sm:grid-flow-col place-items-center sm:place-content-between
          px-7 py-5 items-center gap-2 sm:gap-7"
         >
-          <div className="flex flex-col sm:flex-row gap-2 items-center justify-center">
+          <div className="flex flex-col sm:flex-row gap-6 items-center justify-center">
             <Link href="/">
               <Image src="/images/logo.png" width={60} height={65} alt="logo" />
             </Link>
@@ -31,7 +32,7 @@ function Question(props: {
           <div
             className={`text-md sm:text-lg font-medium tracking-[0.1px] sm:mr-7 ${inter.className}`}
           >
-            {props.index} of {props.totalQuestions}
+            {props.index + 1} of {props.totalQuestions}
           </div>
         </div>
         <div className="line" />
@@ -47,11 +48,17 @@ function Question(props: {
       <footer className="w-full flex flex-col items-center">
         <div className="line" />
         <div className="w-full flex flex-wrap justify-between sm:justify-center items-center px-5 py-10 gap-2 sm:gap-12">
-          <button className="btn-success w-full sm:w-auto">
+          <button
+            className="btn-success w-full sm:w-auto"
+            onClick={() => props.setAnswer("True")}
+          >
             <CheckIcon />
             True
           </button>
-          <button className="btn-error w-full sm:w-auto">
+          <button
+            className="btn-error w-full sm:w-auto"
+            onClick={() => props.setAnswer("False")}
+          >
             <WrongIcon />
             False
           </button>

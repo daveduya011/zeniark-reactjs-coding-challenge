@@ -7,8 +7,9 @@ import WrongIcon from "@/components/Icons/WrongIcon";
 
 export type ResultItem = {
   question: string;
-  answer: boolean;
-  playerAnswer: boolean;
+  answer: string;
+  playerAnswer: string;
+  isCorrect: boolean;
 };
 
 function Result(props: { score: number; items: ResultItem[] }) {
@@ -52,33 +53,36 @@ function Result(props: { score: number; items: ResultItem[] }) {
               >
                 <div className="grid grid-flow-col justify-between items-center">
                   <div className="px-4">
-                    <div className="text-foreground tracking-[0.08px] text-base">
-                      {item.question}
-                    </div>
+                    <div
+                      className="text-foreground tracking-[0.08px] text-base"
+                      dangerouslySetInnerHTML={{ __html: item.question }}
+                    />
                     <div className="mt-2 text-neutral-400 tracking-[0.07px] text-sm italic">
                       The correct answer is{" "}
                       <span
                         className={`font-extrabold ${
-                          item.answer ? "text-success" : "text-error-light"
+                          item.answer == "True"
+                            ? "text-success"
+                            : "text-error-light"
                         }`}
                       >
-                        {item.answer ? "True" : "False"}
+                        {item.answer}
                       </span>
                       . You answered{" "}
                       <span
                         className={
-                          item.playerAnswer
+                          item.playerAnswer == "True"
                             ? "text-success"
                             : "text-error-light"
                         }
                       >
-                        {item.playerAnswer ? "True" : "False"}
+                        {item.playerAnswer}
                       </span>
                       .
                     </div>
                   </div>
                   <div>
-                    {item.playerAnswer == item.answer ? (
+                    {item.isCorrect ? (
                       <CheckIcon className="text-success-light w-3 sm:w-6" />
                     ) : (
                       <WrongIcon className="text-error-dark w-3 sm:w-6" />
@@ -93,9 +97,9 @@ function Result(props: { score: number; items: ResultItem[] }) {
 
       {/*  Footer  */}
       <footer className="w-full flex flex-col items-center py-12">
-        <Link href="/quiz" className="link">
+        <a href="/start-quiz" className="link">
           Play Again
-        </Link>
+        </a>
       </footer>
     </Card>
   );
