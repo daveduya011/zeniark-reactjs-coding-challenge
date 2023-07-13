@@ -1,4 +1,3 @@
-import Question from "@/components/Question";
 import { getQuizQuestions } from "@/app/lib/quiz";
 import Questions from "@/components/Questions";
 
