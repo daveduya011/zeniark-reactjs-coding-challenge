@@ -1,8 +1,8 @@
 import { getQuizQuestions } from "@/app/lib/quiz";
 import Questions from "@/components/Questions";
 
-async function Page() {
-  const { data: questions } = await getQuizQuestions();
+function Page() {
+  const questions = getQuizQuestions();
   return <Questions questions={questions} />;
 }
 
