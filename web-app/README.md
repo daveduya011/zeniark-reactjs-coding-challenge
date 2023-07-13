@@ -8,6 +8,9 @@ For convenience, you can check my [online demo](http://daev-portfolio.online:300
 To build and run in local:
 
 ```bash
+# install required npm modules, make sure you're on web-app folder
+npm install
+
 # first, build the project using
 npm run build
 
@@ -23,6 +26,10 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 First, run the development server:
 
 ```bash
+# install required npm modules, make sure you're on web-app folder
+npm install
+
+# start the server
 npm run dev
 ```
 
